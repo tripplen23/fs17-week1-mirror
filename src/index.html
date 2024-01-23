@@ -4,7 +4,184 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>E-commerce</title>
+    <title>Artist Merchandise E-commerce</title>
+    <audio src="./assets/sounds/lofi-chill.mp3" autoplay loop></audio>
   </head>
-  <body></body>
+  <body>
+    <header aria-label="Logo Section">
+      <img
+        src="./assets/logo.jpg"
+        alt="Artist Merchandise E-commerce Logo"
+        width="50"
+      />
+    </header>
+    <nav role="navigation">
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="cover-video" aria-label="Video Section">
+        <video width="640" height="360" controls>
+          <source src="./assets/trammeo1.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section id="home" aria-label="Home Section">
+        <h1>Synchronize</h1>
+        <h3><i>New born stars from the down of the universe</i></h3>
+      </section>
+      <section id="about" aria-label="About Section">
+        <h1>About us</h1>
+        <p>
+          We're fashion studio based in california. We create unique designs
+          that will blow your mind. We also design unique jewellary pieces.
+          Fashion is an ART that can not be grasped by everyone.
+          <br />
+          <br />
+          We are very dedicated to making our products. We offer unique and
+          creative products to a wide range of people. We have a variety of
+          styles, but for most people, all of the options are in the box. We
+          specialize in making things that make you happy.
+          <br />
+          <br />
+          We strive to build on our vision. As a fashion label, we do our best
+          to create amazing experiences for all people. We are always looking to
+          make something that is easy for everyone.
+        </p>
+      </section>
+      <section id="shop" aria-label="Shop Section">
+        <h1>Shop</h1>
+        <div class="filter-container">
+          <form action="#">
+            <div class="filter-options">
+              <label>
+                <input
+                  type="checkbox"
+                  id="category-men"
+                  name="category"
+                  value="men"
+                />
+                Men's
+                <input
+                  type="checkbox"
+                  id="category-women"
+                  name="category"
+                  value="women"
+                />
+                Women's
+                <input
+                  type="checkbox"
+                  id="category-jewellary"
+                  name="category"
+                  value="jewellary"
+                />
+                Jewellary
+              </label>
+            </div>
+          </form>
+        </div>
+        <table style="width: 100%">
+          <tr>
+            <td><img src="./assets/imgs/1.webp" width="200" alt="1" /></td>
+            <td><img src="./assets/imgs/2.webp" width="200" alt="2" /></td>
+            <td><img src="./assets/imgs/3.webp" width="200" alt="3" /></td>
+            <td><img src="./assets/imgs/4.webp" width="200" alt="4" /></td>
+            <td><img src="./assets/imgs/5.webp" width="200" alt="5" /></td>
+            <td><img src="./assets/imgs/6.webp" width="200" alt="6" /></td>
+            <td><img src="./assets/imgs/7.webp" width="200" alt="7" /></td>
+            <td><img src="./assets/imgs/8.webp" width="200" alt="8" /></td>
+          </tr>
+        </table>
+        <div>
+          <button>Explore more</button>
+        </div>
+      </section>
+      <section id="collections" aria-label="Collections Section">
+        <h1>Collections</h1>
+        <div class="filter-container">
+          <label for="collection-selection"> Choose a collection </label>
+          <select name="collections" id="collection-selection">
+            <option value="default">--- Select a collection ---</option>
+            <option value="summer">Summer</option>
+            <option value="winter">Winter</option>
+          </select>
+        </div>
+        <table style="width: 100%">
+          <tr>
+            <td><img src="./assets/imgs/9.webp" width="200" alt="9" /></td>
+            <td><img src="./assets/imgs/10.webp" width="200" alt="10" /></td>
+            <td><img src="./assets/imgs/11.webp" width="200" alt="11" /></td>
+            <td><img src="./assets/imgs/12.webp" width="200" alt="12" /></td>
+            <td><img src="./assets/imgs/13.webp" width="200" alt="13" /></td>
+            <td><img src="./assets/imgs/14.webp" width="200" alt="14" /></td>
+          </tr>
+        </table>
+        <div>
+          <button>Explore more</button>
+        </div>
+      </section>
+      <section id="contact" aria-label="Contact section">
+        <h1>Contact us</h1>
+
+        <div class="contact-info">
+          <h3>Our Contact Information</h3>
+          <p>
+            Email:
+            <a href="mailto:info@artistmerchandise.com"
+              >info@artistmerchandise.com</a
+            >
+          </p>
+          <p>Phone: +1 234 567 890</p>
+          <p>Address: 123 Main Street, Anytown, CA 12345</p>
+        </div>
+
+        <div class="contact-form">
+          <h3>Get in Touch</h3>
+          <form id="contact-form" action="#">
+            <label for="name">Your Name:</label>
+
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Your Email:</label>
+
+            <input type="email" id="email" name="email" required />
+
+            <label for="message">Your Message:</label>
+
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+
+        <div class="social-links" id="social-links-container">
+          <h3>Follow Us</h3>
+          <ul>
+            <ol>
+              <a href="#" class="facebook-link">Facebook</a>
+            </ol>
+            <ol>
+              <a href="#" class="instagram-link">Instagram</a>
+            </ol>
+            <ol>
+              <a href="#" class="twitter-link">Twitter</a>
+            </ol>
+            <ol>
+              <a href="#" class="pinterest-link">Pinterest</a>
+            </ol>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>© 2024 Artist Merchandise E-commerce. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
