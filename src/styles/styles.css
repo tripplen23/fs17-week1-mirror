@@ -1,0 +1,394 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Kaushan Script";
+  src: url(../assets/fonts/KaushanScript-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "sirin stencil";
+  src: url(../assets/fonts/SirinStencil-Regular.ttf) format("truetype");
+}
+
+body {
+  color: #222;
+  font-family: "sirin stencil";
+  padding-bottom: 50px;
+}
+
+/* TODO: HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 1rem;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+
+.header__nav__logo {
+  height: 50px;
+  width: auto;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.header__nav__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 35rem;
+}
+
+.header__nav__item {
+  margin: 3rem;
+}
+
+.header__nav__item a {
+  color: #faf9f9;
+  text-decoration: none;
+  font-size: large;
+}
+
+.header__nav__item a:hover {
+  text-decoration: underline;
+}
+
+/* TODO: HOME SECTION */
+.home__title {
+  position: absolute;
+  top: 25vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.home__title h1 {
+  font-family: "Kaushan Script";
+  font-size: 7rem;
+  text-shadow: 1px 1px 1px #202020;
+}
+
+.home__cover-video {
+  opacity: 0.8;
+  width: 100vw;
+}
+
+/* TODO: ABOUT SECTION */
+.about {
+  background-color: #f8f8f8; /* Set a background color */
+  padding: 40px; /* Add some padding to the section */
+}
+
+.about__title {
+  font-size: 5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about__content {
+  overflow: hidden;
+  font-size: 1.2em;
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;
+  position: relative;
+  align-self: center;
+}
+
+.about__content--effect {
+  overflow: hidden;
+  white-space: nowrap; /* Prevent line breaks for typewriter effect */
+  animation: typewriter 8s steps(183);
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* TODO: SHOP SECTION */
+.shop {
+  background-color: #333; /* Set the background color */
+  padding: 40px; /* Add padding to the section */
+}
+.shop__title {
+  font-size: 5rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.shop__filter-container {
+  margin-bottom: 2em;
+}
+
+.shop__filter-container__filter-options {
+  color: #fff;
+}
+
+.shop__filter-container__filter-options label {
+  margin-right: 20px; /* Add spacing between checkboxes and labels */
+}
+
+.shop__image-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow images to wrap to the next line */
+}
+
+.shop__image-container img {
+  cursor: pointer;
+  margin: 20;
+}
+
+.shop__explore-btn {
+  text-align: center;
+}
+
+.shop__explore-btn button {
+  background-color: #fff;
+  color: #333;
+  margin: 3rem;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: opacity 0.3s box-shadow 0.3s;
+
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.shop__explore-btn button:hover {
+  opacity: 0.5;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.shop__explore-btn button:active {
+  background-color: #333;
+}
+
+/* TODO: COLLECTIONS SECTION */
+.collections {
+  background-color: #f8f8f8;
+  padding: 40;
+}
+
+.collections__title {
+  font-size: 5rem;
+  color: #333;
+  text-align: center;
+  margin: 2rem;
+}
+
+.collections__filter-container {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.collections__filter-container label {
+  display: block;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.collections__filter-container select {
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.collections__image-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: #dbdbdb;
+}
+
+.collections__image-container img {
+  cursor: pointer;
+  margin: 2rem;
+}
+
+.collections__image-container img:hover {
+  opacity: 0.8;
+}
+
+.collections__explore-btn {
+  text-align: center;
+}
+
+.collections__explore-btn button {
+  background-color: #fff;
+  color: #333;
+  margin: 3rem;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: opacity 0.3s box-shadow 0.3s;
+
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.collections__explore-btn button:hover {
+  opacity: 0.5;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.collections__explore-btn button:active {
+  background-color: #333;
+}
+
+/* TODO: CONTACT SECTION */
+.contact {
+  background-color: #333;
+  padding: 40px;
+}
+
+.contact .contact__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 300px;
+}
+
+.contact__title {
+  font-size: 5rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact__info,
+.contact__form {
+  margin-bottom: 2rem;
+}
+
+.contact__info h2,
+.contact__form h2 {
+  font-size: 2.5rem;
+  color: #bcbcbc;
+  margin-bottom: 1rem;
+}
+
+/* Contact form */
+.contact__form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__form label {
+  font-size: 1.2rem;
+  color: #bcbcbc;
+  margin-bottom: 0.5rem;
+}
+
+.contact__form input,
+.contact__form textarea {
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #555;
+  border-radius: 3px;
+  background-color: #444;
+  color: #fff;
+}
+
+.contact__form button {
+  background-color: #fff;
+  color: #333;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: opacity 0.3s, box-shadow 0.3s;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact__form button:hover {
+  opacity: 0.8;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact info */
+.contact__info {
+  margin-left: 100px;
+}
+
+.contact__info p {
+  color: #777;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+}
+
+/* Social links */
+
+.social-links h3 {
+  font-size: 2.5rem;
+  color: #bcbcbc;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+.social-links ul {
+  display: flex;
+}
+
+.social-links li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.social-links a:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+/* FOOTER STYLES */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1rem;
+}
