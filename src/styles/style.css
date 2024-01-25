@@ -10,16 +10,15 @@
   font-family: "Kaushan Script";
   src: url(../assets/fonts/KaushanScript-Regular.ttf) format("truetype");
 }
-
 @font-face {
   font-family: "sirin stencil";
   src: url(../assets/fonts/SirinStencil-Regular.ttf) format("truetype");
 }
-
 body {
-  color: #222;
+  color: #202020;
   font-family: "sirin stencil";
   padding-bottom: 50px;
+  overflow-x: hidden;
 }
 
 /* TODO: HEADER */
@@ -27,22 +26,34 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
+  background-color: rgb(32, 32, 32);
   padding: 1rem;
 }
-
+@media screen and (max-width: 1024px) {
+  .header {
+    width: 100vw;
+  }
+  .header .header__nav__list {
+    display: none;
+  }
+  .header .header__nav__logo {
+    display: none;
+  }
+}
 .header__nav {
   display: flex;
-  align-items: center;
+  align-items: space-between;
 }
-
 .header__nav__logo {
-  height: 50px;
+  height: 5em;
   width: auto;
   margin: 1rem;
   cursor: pointer;
+  border-radius: 50px;
 }
-
+.header__nav__logo:hover {
+  opacity: 0.4;
+}
 .header__nav__list {
   display: flex;
   list-style: none;
@@ -51,22 +62,40 @@ body {
   position: absolute;
   right: 35rem;
 }
-
 .header__nav__item {
-  margin: 3rem;
+  margin: 2.5rem;
 }
-
 .header__nav__item a {
-  color: #faf9f9;
+  color: #fff;
   text-decoration: none;
-  font-size: large;
+  font-size: 1.25em;
 }
-
 .header__nav__item a:hover {
   text-decoration: underline;
 }
 
 /* TODO: HOME SECTION */
+@media screen and (max-width: 1024px) {
+  .home {
+    width: 100vw;
+  }
+  .home .home__title {
+    position: static;
+    top: 15%;
+    color: rgb(32, 32, 32);
+    margin: 2rem;
+  }
+  .home .home__title h1 {
+    font-size: 1.25em;
+    cursor: pointer;
+  }
+  .home .home__title h2 {
+    display: none;
+  }
+  .home .home__cover-video {
+    width: 100vw;
+  }
+}
 .home__title {
   position: absolute;
   top: 25vh;
@@ -74,20 +103,21 @@ body {
   left: 0;
   right: 0;
   z-index: 5;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: #fff;
 }
-
 .home__title h1 {
   font-family: "Kaushan Script";
-  font-size: 7rem;
+  font-size: 10em;
   text-shadow: 1px 1px 1px #202020;
 }
-
+.home__title h2 {
+  font-family: "sirin stencil";
+  font-size: 2em;
+}
 .home__cover-video {
   opacity: 0.8;
   width: 99.2vw;
@@ -97,31 +127,39 @@ body {
 .about {
   background-color: #f8f8f8; /* Set a background color */
   padding: 40px; /* Add some padding to the section */
+  padding-bottom: 8em;
 }
-
+@media screen and (max-width: 1024px) {
+  .about {
+    width: 100vw;
+  }
+  .about .about__content {
+    text-align: center;
+  }
+  .about .about__content--effect {
+    display: none;
+  }
+}
 .about__title {
-  font-size: 5rem;
-  color: #333;
+  font-size: 5em;
+  color: rgb(32, 32, 32);
   text-align: center;
   margin-bottom: 3rem;
 }
-
 .about__content {
   overflow: hidden;
-  font-size: 1.2em;
-  color: #555;
+  font-size: 1.25em;
+  color: #202020;
   line-height: 1.6;
   text-align: justify;
   position: relative;
   align-self: center;
 }
-
 .about__content--effect {
   overflow: hidden;
   white-space: nowrap; /* Prevent line breaks for typewriter effect */
   animation: typewriter 8s steps(183);
 }
-
 @keyframes typewriter {
   from {
     width: 0;
@@ -133,62 +171,71 @@ body {
 
 /* TODO: SHOP SECTION */
 .shop {
-  background-color: #333; /* Set the background color */
+  background-color: rgb(32, 32, 32); /* Set the background color */
   padding: 40px; /* Add padding to the section */
 }
+@media screen and (max-width: 1024px) {
+  .shop {
+    width: 100vw;
+  }
+  .shop .shop__filter-container {
+    text-align: center;
+  }
+  .shop .shop__image-container {
+    padding: 3em;
+    max-width: 300px; /* Set maximum width for image on small screens */
+  }
+}
 .shop__title {
-  font-size: 5rem;
+  font-size: 5em;
   color: #fff;
   text-align: center;
   margin-bottom: 2rem;
 }
-
 .shop__filter-container {
   margin-bottom: 2em;
 }
-
 .shop__filter-container__filter-options {
   color: #fff;
 }
-
 .shop__filter-container__filter-options label {
+  font-size: 1.25em;
   margin-right: 20px; /* Add spacing between checkboxes and labels */
 }
-
 .shop__image-container {
+  padding: 3em;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap; /* Allow images to wrap to the next line */
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: rgb(0, 0, 0);
 }
-
 .shop__image-container img {
   cursor: pointer;
   margin: 20;
 }
-
+.shop__image-container img:hover {
+  opacity: 0.8;
+}
 .shop__explore-btn {
   text-align: center;
 }
-
 .shop__explore-btn button {
-  background-color: #fff;
-  color: #333;
-  margin: 3rem;
+  background-color: rgb(32, 32, 32);
+  color: #fff;
+  margin: 5rem;
   padding: 10px 20px;
   font-size: 1.2rem;
   cursor: pointer;
   transition: opacity 0.3s box-shadow 0.3s;
-
+  border-radius: 2em;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
 }
-
 .shop__explore-btn button:hover {
   opacity: 0.5;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
-
 .shop__explore-btn button:active {
-  background-color: #333;
+  background-color: rgb(32, 32, 32);
 }
 
 /* TODO: COLLECTIONS SECTION */
@@ -196,174 +243,189 @@ body {
   background-color: #f8f8f8;
   padding: 40;
 }
-
+@media screen and (max-width: 1024px) {
+  .collections {
+    width: 100vw;
+  }
+  .collections .collections__title {
+    font-size: 4.25em;
+  }
+  .collections .collections__filter-container {
+    text-align: center;
+  }
+}
 .collections__title {
-  font-size: 5rem;
-  color: #333;
+  font-size: 5em;
+  color: rgb(32, 32, 32);
   text-align: center;
   margin: 2rem;
 }
-
 .collections__filter-container {
   margin-bottom: 2rem;
   text-align: center;
 }
-
 .collections__filter-container label {
   display: block;
   font-size: 1.2rem;
   color: #555;
   margin-bottom: 20px;
 }
-
 .collections__filter-container select {
   padding: 10px;
   font-size: 1rem;
   margin-bottom: 2rem;
+  font-family: "sirin stencil";
+  border-radius: 15px;
 }
-
 .collections__image-container {
+  padding: 3em;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  background-color: #dbdbdb;
+  background-color: #bebebe;
 }
-
 .collections__image-container img {
   cursor: pointer;
   margin: 2rem;
 }
-
 .collections__image-container img:hover {
   opacity: 0.8;
 }
-
 .collections__explore-btn {
   text-align: center;
 }
-
 .collections__explore-btn button {
   background-color: #fff;
-  color: #333;
-  margin: 3rem;
+  color: rgb(32, 32, 32);
+  margin: 5rem;
   padding: 10px 20px;
   font-size: 1.2rem;
   cursor: pointer;
   transition: opacity 0.3s box-shadow 0.3s;
-
+  border-radius: 2em;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
 }
-
 .collections__explore-btn button:hover {
   opacity: 0.5;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
-
 .collections__explore-btn button:active {
-  background-color: #333;
+  background-color: #fff;
 }
 
 /* TODO: CONTACT SECTION */
 .contact {
-  background-color: #333;
+  background-color: rgb(32, 32, 32);
   padding: 40px;
+  /* Contact form */
+  /* Contact info */
+  /* Social links */
 }
-
-.contact .contact__container {
+@media screen and (max-width: 1024px) {
+  .contact {
+    width: 100vw;
+  }
+  .contact .contact__title {
+    font-size: 3.25em;
+  }
+  .contact .contact__container {
+    text-align: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+  }
+  .contact .contact__info {
+    display: none;
+  }
+}
+.contact__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 300px;
 }
-
 .contact__title {
   font-size: 5rem;
   color: #fff;
   text-align: center;
   margin-bottom: 2rem;
 }
-
-.contact__info,
-.contact__form {
+.contact__info, .contact__form {
   margin-bottom: 2rem;
 }
-
-.contact__info h2,
-.contact__form h2 {
+.contact__info h2, .contact__form h2 {
   font-size: 2.5rem;
-  color: #bcbcbc;
+  color: #bebebe;
   margin-bottom: 1rem;
 }
-
-/* Contact form */
 .contact__form form {
   display: flex;
   flex-direction: column;
 }
-
 .contact__form label {
   font-size: 1.2rem;
-  color: #bcbcbc;
+  color: #bebebe;
   margin-bottom: 0.5rem;
 }
-
 .contact__form input,
 .contact__form textarea {
   padding: 10px;
   margin-bottom: 1rem;
   border: 1px solid #555;
-  border-radius: 3px;
+  border-radius: 15px;
   background-color: #444;
   color: #fff;
+  font-size: 1.25em;
 }
-
+.contact__form input:hover,
+.contact__form input textarea:hover {
+  opacity: 0.8;
+}
+.contact__form input:focus,
+.contact__form input textarea:focus {
+  background-color: #fff;
+  color: rgb(32, 32, 32);
+  font-family: "sirin stencil";
+}
 .contact__form button {
   background-color: #fff;
-  color: #333;
+  color: rgb(32, 32, 32);
   padding: 10px 20px;
   font-size: 1.2rem;
   border: none;
-  border-radius: 3px;
+  border-radius: 15px;
   cursor: pointer;
   transition: opacity 0.3s, box-shadow 0.3s;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
 }
-
 .contact__form button:hover {
   opacity: 0.8;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
-
-/* Contact info */
 .contact__info {
   margin-left: 100px;
 }
-
 .contact__info p {
   color: #777;
   font-size: 2rem;
   margin-bottom: 0.5rem;
-  text-decoration: none;
 }
-
-/* Social links */
-
-.social-links h3 {
+.contact__info p a {
+  text-decoration: none;
+  color: #fff;
+}
+.contact__info__social-links h3 {
   font-size: 2.5rem;
-  color: #bcbcbc;
+  color: #bebebe;
   margin-top: 5rem;
   margin-bottom: 2rem;
 }
-
-.social-links ul {
+.contact__info__social-links ul {
   display: flex;
 }
-
-.social-links li {
+.contact__info__social-links li {
   display: inline-block;
   margin-right: 10px;
 }
-
-.social-links a {
+.contact__info__social-links a {
   text-decoration: none;
   color: #fff;
   font-size: 1.2rem;
@@ -371,24 +433,30 @@ body {
   padding: 5px 10px;
   border-radius: 3px;
 }
-
-.social-links a:hover {
+.contact__info__social-links a:hover {
   background-color: #fff;
   color: #333;
 }
 
 /* FOOTER STYLES */
 .footer {
-  background-color: #333;
+  background-color: #202020;
   color: #fff;
   text-align: center;
-  padding: 20px;
+  padding: 1em;
   position: fixed;
   bottom: 0;
   width: 100%;
 }
-
+@media screen and (max-width: 1024px) {
+  .footer {
+    position: relative;
+    width: 100vw;
+  }
+}
 .footer p {
   margin: 0;
-  font-size: 1rem;
+  font-size: 1em;
 }
+
+/*# sourceMappingURL=style.css.map */

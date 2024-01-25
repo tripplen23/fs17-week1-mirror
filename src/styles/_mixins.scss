@@ -1,0 +1,65 @@
+@use "./theme";
+
+@mixin explore-btn($text-color, $background-color, $border-radius) {
+  background-color: $background-color;
+  color: $text-color;
+  margin: 5rem;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: opacity 0.3s box-shadow 0.3s;
+  border-radius: $border-radius;
+
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    opacity: 0.5;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  &:active {
+    background-color: $background-color;
+  }
+}
+
+@mixin image-container($background-color, $margin) {
+  // similar
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  // diff
+  background-color: $background-color;
+
+  img {
+    cursor: pointer;
+    margin: $margin;
+  }
+
+  img:hover {
+    opacity: 0.8;
+  }
+}
+
+@mixin type-effect($duration, $steps) {
+  overflow: hidden;
+  white-space: nowrap; /* Prevent line breaks for typewriter effect */
+  animation: typewriter $duration steps($steps);
+
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+}
+
+// responsive
+@mixin responsive($device-size) {
+  @media screen and (max-width: $device-size) {
+    @content;
+    width: 100vw;
+  }
+}

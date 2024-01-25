@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="./styles/styles.css" />
-    <audio src="./assets/sounds/lofi-chill.mp3" autoplay loop></audio>
+    <link rel="stylesheet" type="text/css" href="./styles/style.css" />
     <script src="./index.js"></script>
     <title>Artist Merchandise E-commerce</title>
   </head>
@@ -21,16 +20,20 @@
           width="50"
         />
         <ul class="header__nav__list">
-          <li class="header__nav__item nav__home-btn"><a href="#">Home</a></li>
-          <li class="header__nav__item nav__about-btn">
-            <a href="#">About</a>
+          <li class="header__nav__item nav__home-btn">
+            <a href="#home">Home</a>
           </li>
-          <li class="header__nav__item nav__shop-btn"><a href="#">Shop</a></li>
+          <li class="header__nav__item nav__about-btn">
+            <a href="#about">About</a>
+          </li>
+          <li class="header__nav__item nav__shop-btn">
+            <a href="#shop">Shop</a>
+          </li>
           <li class="header__nav__item nav__collections-btn">
-            <a href="#">Collections</a>
+            <a href="#collections">Collections</a>
           </li>
           <li class="header__nav__item nav__contact-btn">
-            <a href="#">Contact</a>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
       </nav>
@@ -42,9 +45,9 @@
       <section class="home" id="home" aria-label="Home Section">
         <div class="home__title">
           <h1>Synchronize</h1>
-          <h3>
+          <h2>
             <i>New born stars from the down of the universe</i>
-          </h3>
+          </h2>
         </div>
         <video class="home__cover-video" autoplay muted loop>
           <source src="./assets/videos/trammeo1.mp4" type="video/mp4" />
