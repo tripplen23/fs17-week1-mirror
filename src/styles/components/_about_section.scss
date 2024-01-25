@@ -1,0 +1,37 @@
+@use "../utils/theme";
+@use "../utils/mixins";
+
+.about {
+  @include mixins.responsive(theme.$small-screen) {
+    .about__content {
+      text-align: center;
+    }
+    .about__content--effect {
+      display: none;
+    }
+  }
+  background-color: theme.$background; /* Set a background color */
+  padding: 40px; /* Add some padding to the section */
+  padding-bottom: theme.$fontBig - 2em;
+
+  &__title {
+    font-size: theme.$fontxxxl;
+    color: theme.$body-rgba;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  &__content {
+    overflow: hidden;
+    font-size: theme.$fontlg;
+    color: theme.$body;
+    line-height: 1.6;
+    text-align: justify;
+    position: relative;
+    align-self: center;
+  }
+
+  &__content--effect {
+    @include mixins.type-effect(8s, 183);
+  }
+}

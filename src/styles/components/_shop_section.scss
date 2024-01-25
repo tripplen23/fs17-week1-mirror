@@ -1,0 +1,50 @@
+@use "../utils/theme";
+@use "../utils/mixins";
+
+.shop {
+  @include mixins.responsive(theme.$small-screen) {
+    .shop__filter-container {
+      text-align: center;
+    }
+    .shop__image-container {
+      padding: 3em;
+      max-width: 300px; /* Set maximum width for image on small screens */
+    }
+  }
+  background-color: theme.$body-rgba; /* Set the background color */
+  padding: 40px; /* Add padding to the section */
+
+  &__title {
+    font-size: theme.$fontxxxl;
+    color: theme.$text;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  &__filter-container {
+    margin-bottom: 2em;
+    &__filter-options {
+      color: theme.$text;
+      label {
+        font-size: theme.$fontlg;
+        margin-right: 20px; /* Add spacing between checkboxes and labels */
+      }
+    }
+  }
+
+  &__image-container {
+    padding: 3em;
+    @include mixins.image-container(theme.$dark, 20);
+  }
+
+  &__explore-btn {
+    text-align: center;
+    button {
+      @include mixins.explore-btn(
+        theme.$text,
+        theme.$body-rgba,
+        theme.$border-radius
+      );
+    }
+  }
+}

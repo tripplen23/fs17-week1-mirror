@@ -1,0 +1,58 @@
+@use "../utils/theme";
+@use "../utils/mixins";
+
+.collections {
+  @include mixins.responsive(theme.$small-screen) {
+    .collections__title {
+      font-size: theme.$fontlg + 3;
+    }
+    .collections__filter-container {
+      text-align: center;
+    }
+  }
+  background-color: theme.$background;
+  padding: 40;
+
+  &__title {
+    font-size: theme.$fontxxxl;
+    color: theme.$body-rgba;
+    text-align: center;
+    margin: 2rem;
+  }
+
+  &__filter-container {
+    margin-bottom: 2rem;
+    text-align: center;
+
+    label {
+      display: block;
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    select {
+      padding: 10px;
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      font-family: "sirin stencil";
+      border-radius: 15px;
+    }
+  }
+
+  &__image-container {
+    padding: 3em;
+    @include mixins.image-container(theme.$grey, 2rem);
+  }
+
+  &__explore-btn {
+    text-align: center;
+    button {
+      @include mixins.explore-btn(
+        theme.$body-rgba,
+        theme.$text,
+        theme.$border-radius
+      );
+    }
+  }
+}

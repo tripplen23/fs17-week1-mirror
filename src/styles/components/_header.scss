@@ -1,0 +1,56 @@
+@use "../utils/theme";
+@use "../utils/mixins";
+
+.header {
+  @include mixins.responsive(theme.$small-screen) {
+    .header__nav__list {
+      display: none;
+    }
+    .header__nav__logo {
+      display: none;
+    }
+  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: theme.$body-rgba;
+  padding: 1rem;
+
+  &__nav {
+    display: flex;
+    align-items: space-between;
+
+    &__logo {
+      height: theme.$fontxxxl;
+      width: auto;
+      margin: 1rem;
+      cursor: pointer;
+      border-radius: 50px;
+      &:hover {
+        opacity: 0.4;
+      }
+    }
+
+    &__list {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      right: 35rem;
+    }
+
+    &__item {
+      margin: 2.5rem;
+    }
+
+    &__item a {
+      color: theme.$text;
+      text-decoration: none;
+      font-size: theme.$fontlg;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

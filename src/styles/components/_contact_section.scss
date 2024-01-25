@@ -1,0 +1,145 @@
+@use "../utils/theme";
+@use "../utils/mixins";
+
+.contact {
+  @include mixins.responsive(theme.$small-screen) {
+    .contact__title {
+      font-size: theme.$fontlg + 2;
+    }
+    .contact__container {
+      text-align: center;
+      grid-template-columns: 1fr 1fr;
+      gap: 2em;
+    }
+    .contact__info {
+      display: none;
+    }
+  }
+
+  background-color: theme.$body-rgba;
+  padding: 40px;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 300px;
+  }
+
+  &__title {
+    font-size: 5rem;
+    color: theme.$text;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  &__info,
+  &__form {
+    margin-bottom: 2rem;
+
+    h2 {
+      font-size: 2.5rem;
+      color: theme.$grey;
+      margin-bottom: 1rem;
+    }
+  }
+
+  /* Contact form */
+  &__form {
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      font-size: 1.2rem;
+      color: theme.$grey;
+      margin-bottom: 0.5rem;
+    }
+    input,
+    textarea {
+      padding: 10px;
+      margin-bottom: 1rem;
+      border: 1px solid #555;
+      border-radius: 15px;
+      background-color: #444;
+      color: theme.$text;
+      font-size: theme.$fontlg;
+    }
+    input {
+      &:hover,
+      textarea:hover {
+        opacity: 0.8;
+      }
+
+      &:focus,
+      textarea:focus {
+        background-color: theme.$text;
+        color: theme.$body-rgba;
+        font-family: "sirin stencil";
+      }
+    }
+
+    button {
+      background-color: theme.$text;
+      color: theme.$body-rgba;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: opacity 0.3s, box-shadow 0.3s;
+      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+      &:hover {
+        opacity: 0.8;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+
+  /* Contact info */
+  &__info {
+    margin-left: 100px;
+
+    p {
+      color: #777;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      a {
+        text-decoration: none;
+        color: theme.$text;
+      }
+    }
+  }
+
+  /* Social links */
+
+  &__info__social-links {
+    h3 {
+      font-size: 2.5rem;
+      color: theme.$grey;
+      margin-top: 5rem;
+      margin-bottom: 2rem;
+    }
+
+    ul {
+      display: flex;
+    }
+
+    li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      color: theme.$text;
+      font-size: 1.2rem;
+      border: 1px solid theme.$text;
+      padding: 5px 10px;
+      border-radius: 3px;
+      &:hover {
+        background-color: theme.$text;
+        color: #333;
+      }
+    }
+  }
+}

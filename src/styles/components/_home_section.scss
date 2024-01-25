@@ -1,0 +1,52 @@
+@use "../utils/theme";
+@use "../utils/mixins";
+
+.home {
+  @include mixins.responsive(theme.$small-screen) {
+    .home__title {
+      position: static;
+      top: 15%;
+      color: theme.$body-rgba;
+      margin: 2rem;
+      h1 {
+        font-size: theme.$fontlg;
+        cursor: pointer;
+      }
+      h2 {
+        display: none;
+      }
+    }
+    .home__cover-video {
+      width: 100vw;
+    }
+  }
+  &__title {
+    position: absolute;
+    top: 25vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: theme.$text;
+    h1 {
+      font-family: "Kaushan Script";
+      font-size: theme.$fontBig;
+      text-shadow: 1px 1px 1px #202020;
+    }
+
+    h2 {
+      font-family: "sirin stencil";
+      font-size: theme.$fontxl;
+    }
+  }
+
+  &__cover-video {
+    opacity: 0.8;
+    width: 99.2vw;
+  }
+}
