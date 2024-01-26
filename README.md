@@ -1,4 +1,4 @@
-# [Synchronize Merchandise Landing Page](https://tripplen23.github.io/fs17-week1/src/index.html)
+# [Synchronize Merchandise Landing Page](https://tripplen23.github.io/synchronize-merchandise/src/index.html)
 
 **Author:** [Binh Duc Nguyen](https://github.com/tripplen23)
 
