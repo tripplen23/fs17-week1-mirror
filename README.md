@@ -1,33 +1,19 @@
-# Week 1 Assignment
+# [Synchronize Merchandise Landing Page](https://tripplen23.github.io/fs17-week1/src/index.html)
 
-This assignment aims to practice HTML, CSS and SASS
+**Author:** [Binh Duc Nguyen](https://github.com/tripplen23)
 
-## Requirement
+This web page is a frontend project that is built from scratch for the first week at Integrify.<br>
+It is a simple website for a merchandise shop.
 
-Create an e-commerce website
+<br />
 
-1. Git/GitHub
+```javascript
+const project_details = {
+   var technologies = [HTML, CSS, SASS]
+   var features = [Responsive design, Well-structed code, Minimal UI, Ready for deployment pipeline]
+}
+```
 
-- create a simple `README` file to introduce yourself
-- submit the assignment by open a pull request (PR)
-- make the repository public
-- add label to your PR
+<br />
 
-2. HTML and Accessibility
-
-- Make use of different tags: headings, paragraphs, link, italic, ordered list, unordered list,table, form
-- Check out more tags that might be helpful: address, section, article, audio
-
-3. CSS
-
-- add styling to the HTML file using Flexbox and Grid
-- add basic animation (hover effect, active link styles, typing effect)
-- the web page does not need to be fully responsive, but at least you should have responsive scaling for Flexbox and Grid system.
-
-4. SASS
-
-- apply SAAS to current project. Make sure to at least use variables and mixins
-
-5. Other
-   - Deploy the project
-   - Write a readme file to describe your project with few more details
+I hope this markdown file is helpful. Please let me know if you have any questions.
