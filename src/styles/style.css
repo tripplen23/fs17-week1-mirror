@@ -112,6 +112,9 @@
   text-decoration: underline;
 }
 
+.home {
+  position: relative;
+}
 @media screen and (min-width: 300px) {
   .home {
     width: 100vw;
@@ -139,7 +142,7 @@
   }
   .home .home__title {
     position: absolute;
-    top: 0;
+    top: -5vh;
     color: #fff;
     margin: 0;
   }
@@ -155,8 +158,6 @@
   }
 }
 .home__title {
-  position: absolute;
-  top: 25vh;
   bottom: 0;
   left: 0;
   right: 0;

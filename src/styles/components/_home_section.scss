@@ -24,7 +24,7 @@
   @include mixins.responsive(theme.$pc-screen) {
     .home__title {
       position: absolute;
-      top: 0;
+      top: -5vh;
       color: theme.$text;
       margin: 0;
       h1 {
@@ -39,9 +39,9 @@
       width: 100vw;
     }
   }
+  position: relative;
   &__title {
-    position: absolute;
-    top: 25vh;
+    // position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
