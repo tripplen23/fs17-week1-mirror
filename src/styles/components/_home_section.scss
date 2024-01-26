@@ -20,6 +20,25 @@
       width: 100vw;
     }
   }
+
+  @include mixins.responsive(theme.$pc-screen) {
+    .home__title {
+      position: absolute;
+      top: 0;
+      color: theme.$text;
+      margin: 0;
+      h1 {
+        font-size: theme.$fontBig;
+        cursor: none;
+      }
+      h2 {
+        display: inline-block;
+      }
+    }
+    .home__cover-video {
+      width: 100vw;
+    }
+  }
   &__title {
     position: absolute;
     top: 25vh;

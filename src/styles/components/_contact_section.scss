@@ -4,15 +4,45 @@
 .contact {
   @include mixins.responsive(theme.$small-screen) {
     .contact__title {
-      font-size: theme.$fontlg + 2;
+      font-size: theme.$fontxxl;
     }
     .contact__container {
       text-align: center;
-      grid-template-columns: 1fr 1fr;
-      gap: 2em;
+      gap: 0;
+      display: flex;
+      flex-direction: column; // Stack items vertically
+      justify-content: center; // Center vertically
+      align-items: center; // Center horizontally
+    }
+    .contact__form {
+      h2 {
+        font-size: theme.$fontxl;
+      }
     }
     .contact__info {
       display: none;
+    }
+  }
+  @include mixins.responsive(theme.$large-screen) {
+    .contact__title {
+      font-size: theme.$fontxxl;
+    }
+    .contact__container {
+      text-align: center;
+      gap: 0;
+      display: grid;
+      flex-direction: column; // Stack items vertically
+      grid-template-columns: 1fr 1fr;
+      justify-content: center; // Center vertically
+      align-items: center; // Center horizontally
+    }
+    .contact__form {
+      h2 {
+        font-size: theme.$fontxl;
+      }
+    }
+    .contact__info {
+      display: block;
     }
   }
 
@@ -37,7 +67,7 @@
     margin-bottom: 2rem;
 
     h2 {
-      font-size: 2.5rem;
+      font-size: theme.$fontxl;
       color: theme.$grey;
       margin-bottom: 1rem;
     }
@@ -98,10 +128,11 @@
   /* Contact info */
   &__info {
     margin-left: 100px;
+    align-items: center;
 
     p {
       color: #777;
-      font-size: 2rem;
+      font-size: theme.$fontlg;
       margin-bottom: 0.5rem;
       a {
         text-decoration: none;
@@ -122,6 +153,9 @@
 
     ul {
       display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
     }
 
     li {

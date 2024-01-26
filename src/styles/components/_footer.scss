@@ -2,7 +2,6 @@
 @use "../utils/mixins";
 .footer {
   @include mixins.responsive(theme.$small-screen) {
-    position: relative;
   }
   background-color: theme.$body;
   color: theme.$text;

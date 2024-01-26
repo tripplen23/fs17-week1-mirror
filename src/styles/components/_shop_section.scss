@@ -3,12 +3,19 @@
 
 .shop {
   @include mixins.responsive(theme.$small-screen) {
+    .shop__title {
+      font-size: theme.$fontxxl;
+    }
     .shop__filter-container {
       text-align: center;
     }
     .shop__image-container {
-      padding: 3em;
-      max-width: 300px; /* Set maximum width for image on small screens */
+      align-items: center;
+      padding: 1em; // Adjust padding for small screens
+      @include mixins.image-container(theme.$dark, 0);
+    }
+    img {
+      max-width: 100%; // Adjust maximum width for smaller screens
     }
   }
   background-color: theme.$body-rgba; /* Set the background color */

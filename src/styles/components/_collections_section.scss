@@ -4,10 +4,15 @@
 .collections {
   @include mixins.responsive(theme.$small-screen) {
     .collections__title {
-      font-size: theme.$fontlg + 3;
+      font-size: theme.$fontxxl;
     }
     .collections__filter-container {
       text-align: center;
+    }
+    .collections__image-container {
+      align-items: center;
+      padding: 1em; // Adjust padding for small screens
+      @include mixins.image-container(theme.$grey, 0);
     }
   }
   background-color: theme.$background;

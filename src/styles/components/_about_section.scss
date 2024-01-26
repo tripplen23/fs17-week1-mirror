@@ -3,11 +3,23 @@
 
 .about {
   @include mixins.responsive(theme.$small-screen) {
+    .about__title {
+      font-size: theme.$fontxxl;
+    }
     .about__content {
       text-align: center;
     }
     .about__content--effect {
       display: none;
+    }
+  }
+
+  @include mixins.responsive(theme.$large-screen) {
+    .about__content {
+      text-align: justify;
+    }
+    .about__content--effect {
+      display: block;
     }
   }
   background-color: theme.$background; /* Set a background color */
@@ -32,6 +44,6 @@
   }
 
   &__content--effect {
-    @include mixins.type-effect(8s, 183);
+    @include mixins.type-effect(20s, 120);
   }
 }
