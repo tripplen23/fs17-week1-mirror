@@ -15,5 +15,3 @@ const project_details = {
 ```
 
 <br />
-
-I hope this markdown file is helpful. Please let me know if you have any questions.
