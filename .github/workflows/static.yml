@@ -50,6 +50,6 @@ jobs:
       - name: Bump version and push tag
         uses: anothrNick/github-tag-action@1.64.0
         env:
-          url: ${{ steps.deployment.outputs.page_url }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DEFAULT_BUMP: patch
           RELEASE_BRANCHES: master
